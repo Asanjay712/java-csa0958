@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+  Scanner scanner=new Scanner(System.in);
+  double pounds=scanner.nextDouble();
+  double height=scanner.nextDouble();
+  double bmi=(pounds*703)/(height*height);
+  int bms=(int)Math.round(bmi);
+  System.out.println(bms);
+     
+  }
+}
