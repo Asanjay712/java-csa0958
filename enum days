@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+enum Day{
+  sunday,monday,tuesday,wednesday,thursday,friday,saturday
+}
+class demo{
+  public static void main(String[] args){
+   Scanner scanner =new Scanner(System.in);
+   int index=scanner.nextInt();
+
+    Day s=Day.values()[index];
+
+      switch(s){
+        case sunday:
+          System.out.println("happy");
+          break;
+          case monday:
+            System.out.println("not bad");
+            break;
+            case tuesday:
+            System.out.println("bad");
+            break;
+            case wednesday:
+              System.out.println("3 days more");
+              break;
+              case thursday:
+                System.out.println("2days more");
+                break;
+                case friday:
+                  System.out.println("1 day more");
+                  break;
+                  case saturday:
+                    System.out.println("alomst completed");
+                    break;
+                    default:
+                    System.out.println("give valid index");
+                    
+            
+      }
+      
+    }
+  } 
