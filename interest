@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class interest{
+  public static void main(String[] args){
+    Scanner scanner=new Scanner(System.in);
+    double amount=scanner.nextDouble();
+    double time=scanner.nextDouble();
+    double rate=scanner.nextDouble();
+    double simpleinte=(amount*time*rate)/100;
+    double compound=amount*Math.pow((1+rate/100),time)-amount;
+    System.out.println(compound);
+     System.out.println(simpleinte);
+  }
+}
