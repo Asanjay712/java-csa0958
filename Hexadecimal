@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class hexadecimaltodecimal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a hexadecimal number: ");
+        String hex = scanner.nextLine();
+        int decimal = 0;
+        for (int i = 0; i < hex.length(); i++) {
+            char hexChar = hex.charAt(i);
+            int digitValue;
+            if (hexChar >= '0' && hexChar <= '9') {
+                digitValue = hexChar - '0';
+            } else if (hexChar >= 'A' && hexChar <= 'F') {
+                digitValue = hexChar - 'A' + 10;
+            } else if (hexChar >= 'a' && hexChar <= 'f') {
+                digitValue = hexChar - 'a' + 10;
+            } else {
+                System.out.println("Invalid hexadecimal character: " + hexChar);
+                return;
+            }
+            decimal = decimal * 16 + digitValue;
+        }
+        System.out.println("Decimal representation: " + decimal);
+        scanner.close();
+    }
+}
