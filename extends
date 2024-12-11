@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Details{
+  void details(){
+    System.out.println("mployee detaails");
+    
+  }
+}
+class employee extends Details{
+  String name;
+  int id;
+  String desi;
+  employee(String name,int id,String desi){
+    this.name=name;
+    this.id=id;
+    this.desi=desi;
+    
+  }
+  void display(){
+    System.out.println(name);
+     System.out.println(id);
+      System.out.println(desi);
+  }
+}
+class Main{
+  public static void main(String[] args){
+    Scanner scanner=new Scanner(System.in);
+    String name=scanner.nextLine();
+    int id=scanner.nextInt();
+scanner.nextLine();
+    String desi=scanner.nextLine();
+    
+    employee obj=new employee(name,id,desi);
+    obj.display();
+    
+  }
+}
