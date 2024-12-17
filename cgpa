@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class Details{
+  private int studentId;
+ private double cgpa;
+  Details(){
+}
+void setId( int studentId){
+  this.studentId=studentId;
+}
+int getId(){
+  return studentId;
+}
+double calculator(int arr[]){
+  double sum=0;
+  for (int i=0;i<arr.length;i++){
+    sum+=arr[i];
+  }
+  return sum;
+}
+void display( double sum,int n){
+  double cgpa=sum/n;
+  System.out.println(cgpa);
+}
+public static void main(String[] args){
+  Scanner scanner=new Scanner(System.in);
+  int studentId=scanner.nextInt();
+  int n=scanner.nextInt();
+  
+  int[] arr=new int[n];
+  for(int i=0;i<n;i++){
+    arr[i]=scanner.nextInt();
+  }
+  Details obj=new Details();
+  obj.setId(studentId);
+  System.out.println(obj.getId());
+  double sum=obj.calculator(arr);
+  obj.display(sum,n);
+}
+}
